@@ -1,16 +1,15 @@
 # ubuntu-git
-
+安装git
 ```
 sudo apt-get install git
 ```
-
-生成密钥  yes       生成~/.ssh/id_rsa.pub
+生成密钥 ->  yes ->  生成~/.ssh/id_rsa.pub
 
 ```
 ssh-keygen -t rsa -C "1813298696@qq.com"
 ```
-
-github->Account Setting->SSH Keys->Add SSH
+设置密钥
+github -> Account Setting -> SSH Keys -> Add SSH
 
 验证是否连接
 
