@@ -1,5 +1,7 @@
 # git
 
+## git config
+
 查看当前配置
 
 ```
@@ -19,6 +21,8 @@ git add
 git commit 
 git commit -a
 ```
+
+## git status
 
 查看状态
 
@@ -100,7 +104,39 @@ git commit -m "deleting test.sh file"
 git push origin master
 ```
 
+## git log 
 
+```
+git log --oneline --decorate --all
+```
+
+1. online 提供一个对每次修改的总结 
+2. decorate 给出其他信息
+3. all 显示所有分支的日志信息 不仅限于当前分支
+
+## git branch
+
+```
+git branch test
+git checkout test
+git push -u origin test
+```
+
+## git diff
+
+```
+git diff file.txt | cat -n
+```
+
+
+
+## questions
+
+每次提交弹出输入账号密码，下载时用ssh，不要用http
+
+```
+git clone git@github.com:gqxiaofang/supcon.git
+```
 
 
 
