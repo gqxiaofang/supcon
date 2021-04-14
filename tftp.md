@@ -1,10 +1,10 @@
-##### tftp
+# tftp
 
 ```
-sudo apt-get install tftp-hpa tftpd-hpa
+sudo apt-get install tftp-hpa tftpd-hpa	
 sudo apt-get insatll xinetd
-mkdir /home/xf/tftpboot
-chomd 777 /home/xf/tftpboot
+mkdir /home/xf/tftpboot		
+chomd 777 /home/xf/tftpboot	
 sudo vim /etc/xinetd.d/tftp
 sudo service tftpd-hpa start
 sudo vim /etc/default/tftpd-hpa
@@ -35,7 +35,7 @@ service tftp
 # /etc/default/tftpd-hpa
 
 TFTP_USERNAME="tftp"
-TFTP_DIRECTORY="/home/xf/tftpboot/"
+TFTP_DIRECTORY="/home/xf/tftpboot/"	
 TFTP_ADDRESS=":69"
 TFTP_OPTION="-l -c -s"
 ```
@@ -52,3 +52,4 @@ get /home/xf/tftpboot/test.txt	这里需要绝对路径 很奇怪
 ```
 tftp -g -l /etc/config.ini -r /home/xf/tftpboot/config.ini 192.168.9.2
 ```
+
