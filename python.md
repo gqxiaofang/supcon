@@ -20,11 +20,24 @@ apt-get install python3.7
 wget https://www.python.org/ftp/python/3.7.1/Python-3.7.1.tgz	# python官网找到对应的版本
 tar -zxvf Python-3.7.1.tgz
 cd Python-3.7.1
-./confiure 或者 ./configure --prefix=/usr/local/python3.7.1
-make 
-make test
+./confiure 或者 ./configure --prefix=/usr/local(推荐)
+make&&sudo make install
+```
+
+验证
 
 ```
+python3 -V
+```
+
+修改指向
+
+```
+sudo unlink /usr/bin/python
+sudo ln -s /usr/bin/python3.7 /usr/bin/python
+```
+
+
 
 make test报错ModuleNotFoundError: No module named ‘_ctypes’ 
 
@@ -39,5 +52,3 @@ sudo apt-get install libssl-dev openssl
 sudo apt-get install libffi-dev
 重复操作./configure....
 ```
-
-wireshark
